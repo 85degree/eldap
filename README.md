@@ -1,5 +1,7 @@
 ## Laravel and LDAP ##
 
+[![Build Status](https://travis-ci.org/apung/eldap.svg)](https://travis-ci.org/apung/eldap)
+
 ### Installing ###
 ```
 composer require apung\ldap
