@@ -1,6 +1,10 @@
 ## Laravel and LDAP ##
 
 [![Build Status](https://travis-ci.org/apung/eldap.svg)](https://travis-ci.org/apung/eldap)
+[![Total Downloads](https://poser.pugx.org/apung/ldap/downloads.svg)](https://packagist.org/packages/apung/ldap)
+[![Latest Stable Version](https://poser.pugx.org/apung/ldap/v/stable.svg)](https://packagist.org/packages/apung/ldap)
+[![Latest Unstable Version](https://poser.pugx.org/apung/ldap/v/unstable.svg)](https://packagist.org/packages/apung/ldap)
+[![License](https://poser.pugx.org/apung/ldap/license.svg)](https://packagist.org/packages/apung/ldap)
 
 ### Installing ###
 ```
