@@ -39,5 +39,5 @@ $select = $ldap->select(array('uid','givenname'))->from('ou=people,dc=example,dc
 
 ### TODO ###
 TODO:
-1. CRUD (Create / Read / Update / Delete) statements
-1. Documentation
+* CRUD (Create / Read / Update / Delete) statements
+* Documentation
