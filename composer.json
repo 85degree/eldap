@@ -1,0 +1,25 @@
+{
+    "name": "apung/ldap",
+    "description": "Laravel ",
+    "keywords": ["ldap", "openldap", "phpldap", "laravel"],
+    "license":"BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Abdul Gaffur A Dama",
+            "email": "apung.dama@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/Apung/Ldap/Abstracts/"
+        ],
+        "psr-0": {
+            "Apung\\Ldap\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
