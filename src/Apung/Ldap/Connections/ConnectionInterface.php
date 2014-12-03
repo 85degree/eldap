@@ -10,6 +10,6 @@ namespace Apung\Ldap\Connections;
 interface ConnectionInterface
 {
     function connect();
-    //function bind($bind_rdn, $bind_pw);
+    function auth($bind_rdn, $bind_pw);
     function disconnect();
 }

@@ -9,8 +9,13 @@
 return array(
     'host' => 'ldap.host.com',
     'port' => 389,
+    'base_dn'=>'dc=example,dc=com',
     'bind_rdn'=>'cn=manager,dc=example,dc=com',
     'bind_pw'=>'yourPassword',
     'people_base' => "ou=people,dc=example,dc=com",
-    'group_base'=> "ou=groups,dc=example,dc=com"
+    'group_base'=> "ou=groups,dc=example,dc=com",
+
+    /** ObjectClasses **/
+    'people_objectclasses' => array('top','inetOrgPerson','shadowAccount'),
+
 );

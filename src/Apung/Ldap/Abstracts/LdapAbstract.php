@@ -6,15 +6,20 @@
  *
  * Lisence and Term of Conditions, please read README.txt
  */
-namespace Apung\Ldap\LdapAbstracts;
+namespace Apung\Ldap\Abstracts;
 
-abstract class LdapAbstract
+use \Apung\Ldap\Exceptions\LdapException;
+
+abstract class LdapAbstract extends PeopleAbstract
 {
     protected $base_dn;
     protected $connection;
     protected $select = "*";
     protected $where = "(objectClass=*)";
     protected $withdn = false;
+    protected $bind;
+
+    protected $object;
 
     function find(){
         return $this;
@@ -26,7 +31,12 @@ abstract class LdapAbstract
      */
     function select(){
         $param = func_get_args();
-        if(isset($param[0])) $this->select = $param;
+        if(isset($param[0]) && !is_array($param[0])){
+            $this->select = array($param[0]);
+        } elseif(isset($param[0]) && is_array($param[0])) {
+            $this->select = $param;
+        }
+
         return $this;
     }
 
@@ -90,5 +100,28 @@ abstract class LdapAbstract
     function withdn(){
         $this->withdn = true;
         return $this;
+    }
+
+    /* ADD OBJECT */
+    /**
+     * @param array $insert
+     *
+     */
+    function insert(){
+        $this->object = func_get_args();
+        return $this;
+    }
+
+    /**
+     * @param String $dn
+     */
+    function into($dn){
+        try {
+            ldap_add($this->connection, $dn, $this->object[0]);
+        } catch(\Exception $e){
+            if($e->getMessage() == "ldap_add(): Add: Already exists")
+                throw new LdapException("already exist");
+        }
+
     }
 }

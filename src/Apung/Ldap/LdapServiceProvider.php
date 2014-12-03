@@ -28,7 +28,10 @@ class LdapServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+        $this->app['ldap'] = $this->app->share(function($app)
+        {
+            return new Ldap;
+        });
 	}
 
 	/**
