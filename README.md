@@ -6,6 +6,8 @@
 [![Latest Unstable Version](https://poser.pugx.org/apung/ldap/v/unstable.svg)](https://packagist.org/packages/apung/ldap)
 [![License](https://poser.pugx.org/apung/ldap/license.svg)](https://packagist.org/packages/apung/ldap)
 
+Frustated with LDAP? Want to use 'SQL'-style of LDAP?
+
 ### Installing ###
 ```
 composer require apung\ldap
